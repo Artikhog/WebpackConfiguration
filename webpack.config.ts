@@ -17,8 +17,9 @@ export default (env: envVariables): webpack.Configuration => {
 
     const options: BuildOptions = {
         port: env.port,
-        mode: env.mode,
+        mode: env.mode ?? 'development',
         paths: paths,
+        isDev: env.mode !== 'production',
     }
 
     return buildWebpack(options);

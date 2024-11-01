@@ -2,6 +2,7 @@ export interface BuildOptions {
     port: number,
     paths: BuildPaths;
     mode: BuildMode;
+    isDev: boolean;
 }
 
 export type BuildMode = 'production' | 'development';
