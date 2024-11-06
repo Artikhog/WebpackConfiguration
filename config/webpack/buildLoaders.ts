@@ -15,5 +15,9 @@ export function buildLoaders(options: BuildOptions): ModuleOptions['rules'] {
                 options.isDev ? "style-loader" : MiniCssExtractPlugin.loader,
                 "css-loader"],
         },
+        {
+            test: /\.(png|svg|jpg|jpeg|gif)$/i,
+            type: 'asset/resource',
+        },
     ]
 }
